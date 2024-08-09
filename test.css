@@ -1,0 +1,151 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0056b3;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+fieldset {
+    border: 1px solid #000000;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 5px;
+}
+
+label {
+    display: block;
+    flex: 1;
+    margin-bottom: 5px;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+.personal-info {
+    display: flex;
+    flex-direction: column; /* Stack personal-info groups vertically */
+    gap: 1rem; /* Space between personal-info groups */
+}
+
+.personal-details-group {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to new lines if necessary */
+    gap: 1rem; /* Space between items */
+}
+
+.personal-details-group > * {
+    flex: 1; /* Allow items to grow and shrink */
+    min-width: 200px; /* Ensure items have a minimum width */
+}
+
+/* Adjust label spacing within personal-details-group */
+.personal-details-group label {
+    margin-right: 0.5rem; /* Space between label and input */
+}
+
+/* Optional: Adjust width for select and input elements if needed */
+.personal-details-group select,
+.personal-details-group input {
+    flex: 1; /* Allow inputs to grow to fill available space */
+    min-width: 150px; /* Ensure inputs have a minimum width */
+}
+
+
+.billing-info {
+    display: flex;
+    align-items: center;
+    gap: 10rem; 
+}
+
+.billing-address-group,
+.postal-code-group,
+.city-group {
+    display: flex;
+    flex-direction: column; 
+}
+
+.postal-city-info {
+    display: flex;
+    gap: 10rem; 
+    margin-top: 1rem; 
+}
+
+.billing-info label,
+.postal-city-info label {
+    margin-right: 0.5rem;  
+}
+
+.billing-info input,
+.postal-city-info input {
+    width: 380px; 
+}
+
+
+.payment-info {
+    display: flex;
+    align-items: center;
+    gap: 10rem; 
+}
+
+.payment-details-group {
+    display: flex;
+    flex-direction: column; 
+}
+
+.postal-city-info {
+    display: flex;
+    gap: 10rem; 
+    margin-top: 1rem; 
+}
+
+.payment-details-group label {
+    margin-right: 0.5rem;  
+}
+
+.payment-details-group input {
+    width: 380px; 
+}

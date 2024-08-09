@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+        <!--CSS Style-->
+        <link rel="stylesheet" href="vehicle rates style.css">
+     
+        <!--Icon link-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+        <title>Auto Mart</title>
+
+        <!--Favicon-->
+        <link rel="shortcut icon" href="Images/Favicon.png" type="image/svg+xml">
+
+    </head>
+	
+    <body>
+        <!-- Navigation bar and background image -->
+        <div class="bg-img">
+            <div class="topnav">
+                <a class="navbar-brand" href="#">
+                    <img src="Images/Logo.png" alt="logo" style="width:250px;">
+                </a>
+                <div class="nav-links">
+                    <a href="Home.html">Home</a>
+                    <a class="active" href="Vehicle Rates.html">Vehicle Rates</a>
+                    <a href="contact us.html">Contact Us</a>
+                    <a href="Log in.html">Log In</a>
+                </div>
+                <form class="search-form" action="#" method="get">
+                    <input type="text" placeholder="Search..." name="search">
+                    <button type="submit"><img src="Images/Sear.png" alt="Search Icon"></button>
+                </form>
+            </div>
+        </div>
+
+        
+        <section class="hero">
+            <div class="hero-container">
+                <h1>Your Next Adventure Starts Here</h1>
+                <form>
+                    <div class="form-group">
+                        <label for="vehicle-type">Vehicle Type:</label>
+                        <select> 
+                            <option value="mini car">Mini Car</option>
+                            <option value="general car">General Cars</option>
+                            <option value="premium car">Premium cars</option>
+                            <option value="luxury car">Luxury Car</option>
+                            <option value="4wd and suv">4WD and SUV</option>
+                        </select>
+                    
+                        <label for="location">Location:</label>
+                        <input type="text" id="location" name="location" placeholder="Enter location">
+                    </div>
+                    <div class="date-time-group">
+                        <div>
+                            <label for="from-date">From:</label>
+                            <input type="date" id="from-date" name="from-date" value="2024-08-01">
+                        </div>
+                        <div>
+                            <label for="from-time">Time:</label>
+                            <input type="time" id="from-time" name="from-time" value="00:00">
+                        </div>
+                        <div>
+                            <label for="to-date">To:</label>
+                            <input type="date" id="to-date" name="to-date" value="2024-08-07">
+                        </div>
+                        <div>
+                            <label for="to-time">Time:</label>
+                            <input type="time" id="to-time" name="to-time" value="00:00">
+                        </div>
+                    </div>
+                
+                    <script>
+                        document.addEventListener('DOMContentLoaded', () => {
+                            const now = new Date();
+                            const year = now.getFullYear();
+                            const month = String(now.getMonth() + 1).padStart(2, '0'); 
+                            const day = String(now.getDate()).padStart(2, '0');
+                            const hours = String(now.getHours()).padStart(2, '0');
+                            const minutes = String(now.getMinutes()).padStart(2, '0');
+                    
+                            document.getElementById('from-date').value = `${year}-${month}-${day}`;
+                            document.getElementById('from-time').value = `${hours}:${minutes}`;
+                            document.getElementById('to-date').value = `${year}-${month}-${day}`;
+                            document.getElementById('to-time').value = `${hours}:${minutes}`;
+                        });
+                    </script>
+                    
+                
+                    <div class="checkbox-group">
+                        <div>
+                            <input type="checkbox" id="show-nearby-vehicles" name="show-nearby-vehicles">
+                            <label for="show-nearby-vehicles">Show nearby vehicles</label>
+                        </div>
+                    </div>
+                    <button type="submit">Search</button>
+                </form>
+            </div>
+        </section>
+
+        
+            <div id="box-container-minicars" class="box-container minicars">
+                <h2 class="box-heading">Mini Cars</h2>
+                <div class="car-container">
+                    
+                    <div class="car-card">
+                        <div class="car-image">
+                            <img src="Images/Suzuki_Wagon_R.png" alt="Wagon-r">
+                        </div>
+                        <div class="car-details">
+                            <h3>Suzuki Wagon-R</h3>
+                            <p class="self-driven">SELF DRIVEN / WITH DRIVER</p>
+                            <p class="price">LKR <span>148,500.00</span></p>
+                            <a href="booking.html" class="book-now">
+                                BOOK NOW
+                                <img src="Images/calendar-date.png" alt="bookings">
+                            </a>
+                            <div class="deposit">
+                                <p>LKR 300,000.00</p>
+                                <p>Refundable Deposit</p>
+                            </div>
+                            <ul class="car-info">
+                                <li>4 Passengers</li>
+                                <li>4 Seats</li>
+                                <li>1 Bags</li>
+                                <li>5 Doors</li>
+                                <li>Auto</li>
+                                <li>Air conditioning</li>
+                                <li>105.00 LKR Per Extra Km</li>
+                            </ul>
+                            <ul class="additional-info">
+                                <li>Free mileage: 300 KM</li>
+                                <li>24/7 Road Side Assistance</li>
+                                <li>No Hidden Charges</li>
+                                <li>Tax excluded Rates</li>
+                            </ul>
+                        </div>
+                    </div>
+                
+                    <div class="car-card">
+                        <div class="car-image">
+                            <img src="Images/Suzuki-Hustler.png" alt="Hustler">
+                        </div>
+                        <div class="car-details">
+                            <h3>Suzuki Hustler</h3>
+                            <p class="self-driven">SELF DRIVEN / WITH DRIVER</p>
+                            <p class="price">LKR <span>110,000</span></p>
+                            <a href="booking.html" class="book-now">
+                                BOOK NOW
+                                <img src="Images/calendar-date.png" alt="bookings">
+                            </a>
+                            <div class="deposit">
+                                <p>LKR 180,000.00</p>
+                                <p>Refundable Deposit</p>
+                            </div>
+                            <ul class="car-info">
+                                <li>4 Passengers</li>
+                                <li>1 Bags</li>
+                                <li>5 Doors</li>
+                                <li>Auto</li>
+                                <li>Air conditioning</li>
+                                <li>102.00 LKR Per Extra Km</li>
+                            </ul>
+                            <ul class="additional-info">
+                                <li>Free mileage: 300 KM</li>
+                                <li>24/7 Road Side Assistance</li>
+                                <li>No Hidden Charges</li>
+                                <li>Tax excluded Rates</li>
+                            </ul>
+                        </div>
+                    </div>
+            
+                    <div class="car-card">
+                        <div class="car-image">
+                            <img src="Images/Suzuki_Alto.png" alt="Alto">
+                        </div>
+                        <div class="car-details">
+                            <h3>Suzuki Alto</h3>
+                            <p class="self-driven">SELF DRIVEN / WITH DRIVER</p>
+                            <p class="price">LKR <span>102,960.00</span></p>
+                            <a href="booking.html" class="book-now">
+                                BOOK NOW
+                                <img src="Images/calendar-date.png" alt="bookings">
+                            </a>
+                            <div class="deposit">
+                                <p>LKR 200,000.00</p>
+                                <p>Refundable Deposit</p>
+                            </div>
+                            <ul class="car-info">
+                                <li>4 Passengers</li>
+                                <li>1 Bags</li>
+                                <li>4 Doors</li>
+                                <li>Manual</li>
+                                <li>Air conditioning</li>
+                                <li>50.00 LKR Per Extra Km</li>
+                            </ul>
+                            <ul class="additional-info">
+                                <li>Free mileage: 300 KM</li>
+                                <li>24/7 Road Side Assistance</li>
+                                <li>No Hidden Charges</li>
+                                <li>Tax excluded Rates</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="car-card">
+                        <div class="car-image">
+                            <img src="Images/Perodua_Axia.png" alt="Axia">
+                        </div>
+                        <div class="car-details">
+                            <h3>Perodua Axia</h3>
+                            <p class="self-driven">SELF DRIVEN / WITH DRIVER</p>
+                            <p class="price">LKR <span>142,556.00</span></p>
+                            <a href="booking.html" class="book-now">
+                                BOOK NOW
+                                <img src="Images/calendar-date.png" alt="bookings">
+                            </a>
+                            <div class="deposit">
+                                <p>LKR 250,000.00</p>
+                                <p>Refundable Deposit</p>
+                            </div>
+                            <ul class="car-info">
+                                <li>4 Passengers</li>
+                                <li>1 Bags</li>
+                                <li>5 Doors</li>
+                                <li>Auto</li>
+                                <li>Air conditioning</li>
+                                <li>86.00 LKR Per Extra Km</li>
+                            </ul>
+                            <ul class="additional-info">
+                                <li>Free mileage: 300 KM</li>
+                                <li>24/7 Road Side Assistance</li>
+                                <li>No Hidden Charges</li>
+                                <li>Tax excluded Rates</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="box-container-generalcars" class="box-container generalcars">
+                <h2 class="box-heading">General Cars</h2>
+                <div class="car-container">
+                    <!-- Car Card 1 -->
+                    <div class="car-card">
+                        <div class="car-image">
+                            <img src="Images/Suzuki_Swift.png" alt="Swift">
+                        </div>
+                        <div class="car-details">
+                            <h3>Suzuki Swift</h3>
+                            <p class="self-driven">SELF DRIVEN / WITH DRIVER</p>
+                            <p class="price">LKR <span>172,000.00</span></p>
+                            <a href="booking.html" class="book-now">
+                                BOOK NOW
+                                <img src="Images/calendar-date.png" alt="bookings">
+                            </a>
+                            <div class="deposit">
+                                <p>LKR 250,000.00</p>
+                                <p>Refundable Deposit</p>
+                            </div>
+                            <ul class="car-info">
+                                <li>4 Passengers</li>
+                                <li>2 Bags</li>
+                                <li>5 Doors</li>
+                                <li>Auto</li>
+                                <li>Air conditioning</li>
+                                <li>100 LKR Per Extra Km</li>
+                            </ul>
+                            <ul class="additional-info">
+                                <li>Free mileage: 300 KM</li>
+                                <li>24/7 Road Side Assistance</li>
+                                <li>No Hidden Charges</li>
+                                <li>Tax excluded Rates</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="car-card">
+                        <div class="car-image">
+                            <img src="Images/Toyota_Aqua.png" alt="Aqua">
+                        </div>
+                        <div class="car-details">
+                            <h3>Toyota Aqua</h3>
+                            <p class="self-driven">SELF DRIVEN / WITH DRIVER</p>
+                            <p class="price">LKR <span>153,000.00</span></p>
+                            <a href="booking.html" class="book-now">
+                                BOOK NOW
+                                <img src="Images/calendar-date.png" alt="bookings">
+                            </a>
+                            <div class="deposit">
+                                <p>LKR 240,250.00</p>
+                                <p>Refundable Deposit</p>
+                            </div>
+                            <ul class="car-info">
+                                <li>4 Passengers</li>
+                                <li>2 Bags</li>
+                                <li>5 Doors</li>
+                                <li>Auto</li>
+                                <li>Air conditioning</li>
+                                <li>175.00 LKR Per Extra Km</li>
+                            </ul>
+                            <ul class="additional-info">
+                                <li>Free mileage: 300 KM</li>
+                                <li>24/7 Road Side Assistance</li>
+                                <li>No Hidden Charges</li>
+                                <li>Tax excluded Rates</li>
+                            </ul>
+                        </div>
+                    </div>
+            
+                    <div class="car-card">
+                        <div class="car-image">
+                            <img src="Images/Honda_Insite.png" alt="Insight">
+                        </div>
+                        <div class="car-details">
+                            <h3>Honda Insight</h3>
+                            <p class="self-driven">SELF DRIVEN / WITH DRIVER</p>
+                            <p class="price">LKR <span>192,000.00</span></p>
+                            <a href="booking.html" class="book-now">
+                                BOOK NOW
+                                <img src="Images/calendar-date.png" alt="bookings">
+                            </a>
+                            <div class="deposit">
+                                <p>LKR 248,000.00</p>
+                                <p>Refundable Deposit</p>
+                            </div>
+                            <ul class="car-info">
+                                <li>4 Passengers</li>
+                                <li>2 Bags</li>
+                                <li>5 Doors</li>
+                                <li>Auto</li>
+                                <li>Air conditioning</li>
+                                <li>200.00 LKR Per Extra Km</li>
+                            </ul>
+                            <ul class="additional-info">
+                                <li>Free mileage: 300 KM</li>
+                                <li>24/7 Road Side Assistance</li>
+                                <li>No Hidden Charges</li>
+                                <li>Tax excluded Rates</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="box-container-premiumcars" class="box-container premiumcars">
+                <h2 class="box-heading">Primium Cars</h2>
+                <div class="car-container">
+                    <!-- Car Card 1 -->
+                    <div class="car-card">
+                        <div class="car-image">
+                            <img src="Images/Honda_Grace.png" alt="Grace">
+                        </div>
+                        <div class="car-details">
+                            <h3>Honda Grace</h3>
+                            <p class="self-driven">SELF DRIVEN / WITH DRIVER</p>
+                            <p class="price">LKR <span>225,000.00</span></p>
+                            <a href="booking.html" class="book-now">
+                                BOOK NOW
+                                <img src="Images/calendar-date.png" alt="bookings">
+                            </a>
+                            <div class="deposit">
+                                <p>LKR 250,000.00</p>
+                                <p>Refundable Deposit</p>
+                            </div>
+                            <ul class="car-info">
+                                <li>4 Passengers</li>
+                                <li>3 Bags</li>
+                                <li>5 Doors</li>
+                                <li>Auto</li>
+                                <li>Air conditioning</li>
+                                <li>215.00 LKR Per Extra Km</li>
+                            </ul>
+                            <ul class="additional-info">
+                                <li>Free mileage: 300 KM</li>
+                                <li>24/7 Road Side Assistance</li>
+                                <li>No Hidden Charges</li>
+                                <li>Tax excluded Rates</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="car-card">
+                        <div class="car-image">
+                            <img src="Images/Honda-Civic.png" alt="Civic">
+                        </div>
+                        <div class="car-details">
+                            <h3>Honda Civic</h3>
+                            <p class="self-driven">SELF DRIVEN / WITH DRIVER</p>
+                            <p class="price">LKR <span>229,000.00</span></p>
+                            <a href="booking.html" class="book-now">
+                                BOOK NOW
+                                <img src="Images/calendar-date.png" alt="bookings">
+                            </a>
+                            <div class="deposit">
+                                <p>LKR 285,000.00</p>
+                                <p>Refundable Deposit</p>
+                            </div>
+                            <ul class="car-info">
+                                <li>4 Passengers</li>
+                                <li>2 Bags</li>
+                                <li>5 Doors</li>
+                                <li>Auto</li>
+                                <li>Air conditioning</li>
+                                <li>119.00 LKR Per Extra Km</li>
+                            </ul>
+                            <ul class="additional-info">
+                                <li>Free mileage: 300 KM</li>
+                                <li>24/7 Road Side Assistance</li>
+                                <li>No Hidden Charges</li>
+                                <li>Tax excluded Rates</li>
+                            </ul>
+                        </div>
+                </div>
+        
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="Images/Toyota-Premio.png" alt="Premio">
+                    </div>
+                    <div class="car-details">
+                        <h3>Toyota Premio</h3>
+                        <p class="self-driven">SELF DRIVEN / WITH DRIVER</p>
+                        <p class="price">LKR <span>289,000.00</span></p>
+                        <a href="booking.html" class="book-now">
+                            BOOK NOW
+                            <img src="Images/calendar-date.png" alt="bookings">
+                        </a>
+                        <div class="deposit">
+                            <p>LKR 300,000.00</p>
+                            <p>Refundable Deposit</p>
+                        </div>
+                        <ul class="car-info">
+                            <li>4 Passengers</li>
+                            <li>2 Bags</li>
+                            <li>5 Doors</li>
+                            <li>Auto</li>
+                            <li>Air conditioning</li>
+                            <li>225 LKR Per Extra Km</li>
+                        </ul>
+                        <ul class="additional-info">
+                            <li>Free mileage: 300 KM</li>
+                            <li>24/7 Road Side Assistance</li>
+                            <li>No Hidden Charges</li>
+                            <li>Tax excluded Rates</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="Images/Toyota_Allion.png" alt="Allion">
+                    </div>
+                    <div class="car-details">
+                        <h3>Toyota Allion</h3>
+                        <p class="self-driven">SELF DRIVEN / WITH DRIVER</p>
+                        <p class="price">LKR <span>298,000.00</span></p>
+                        <a href="booking.html" class="book-now">
+                            BOOK NOW
+                            <img src="Images/calendar-date.png" alt="bookings">
+                        </a>
+                        <div class="deposit">
+                            <p>LKR 300,000.00</p>
+                            <p>Refundable Deposit</p>
+                        </div>
+                        <ul class="car-info">
+                            <li>4 Passengers</li>
+                            <li>2 Bags</li>
+                            <li>5 Doors</li>
+                            <li>Auto</li>
+                            <li>Air conditioning</li>
+                            <li>225.00 LKR Per Extra Km</li>
+                        </ul>
+                        <ul class="additional-info">
+                            <li>Free mileage: 300 KM</li>
+                            <li>24/7 Road Side Assistance</li>
+                            <li>No Hidden Charges</li>
+                            <li>Tax excluded Rates</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+<div id="box-container-electriccars" class="box-container electriccars">
+            <h2 class="box-heading">Electric Cars</h2>
+            <div class="car-container">
+
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="Images/Nissan-Leaf.png" alt="Leaf">
+                    </div>
+                    <div class="car-details">
+                        <h3>Nissan Leaf</h3>
+                        <p class="self-driven">SELF DRIVEN / WITH DRIVER</p>
+                        <p class="price">LKR <span>260,000.00</span></p>
+                        <a href="booking.html" class="book-now">
+                            BOOK NOW
+                            <img src="Images/calendar-date.png" alt="bookings">
+                        </a>
+                        <div class="deposit">
+                            <p>LKR 305,000.00</p>
+                            <p>Refundable Deposit</p>
+                        </div>
+                        <ul class="car-info">
+                            <li>4 Passengers</li>
+                            <li>2 Bags</li>
+                            <li>5 Doors</li>
+                            <li>Auto</li>
+                            <li>Air conditioning</li>
+                            <li>265.00 LKR Per Extra Km</li>
+                        </ul>
+                        <ul class="additional-info">
+                            <li>Free mileage: 300 KM</li>
+                            <li>24/7 Road Side Assistance</li>
+                            <li>No Hidden Charges</li>
+                            <li>Tax excluded Rates</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="box-container-luxurycars" class="box-container luxurycars">
+            <h2 class="box-heading">Luxury Cars</h2>
+            <div class="car-container">
+        
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="Images/BMW_520.png" alt="BMW 520">
+                    </div>
+                    <div class="car-details">
+                        <h3>BMW 520</h3>
+                        <p class="self-driven">SELF DRIVEN / WITH DRIVER</p>
+                        <p class="price">LKR <span>300,000.00</span></p>
+                        <a href="booking.html" class="book-now">
+                            BOOK NOW
+                            <img src="Images/calendar-date.png" alt="bookings">
+                        </a>
+                        <div class="deposit">
+                            <p>LKR 369,000.00</p>
+                            <p>Refundable Deposit</p>
+                        </div>
+                        <ul class="car-info">
+                            <li>4 Passengers</li>
+                            <li>2 Bags</li>
+                            <li>5 Doors</li>
+                            <li>Auto</li>
+                            <li>Air conditioning</li>
+                            <li>258 LKR Per Extra Km</li>
+                        </ul>
+                        <ul class="additional-info">
+                            <li>Free mileage: 300 KM</li>
+                            <li>24/7 Road Side Assistance</li>
+                            <li>No Hidden Charges</li>
+                            <li>Tax excluded Rates</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="Images/Mercedes_Benz_S_Class_1.png" alt="Bnez s">
+                    </div>
+                    <div class="car-details">
+                        <h3>Benz S</h3>
+                        <p class="self-driven">SELF DRIVEN / WITH DRIVER</p>
+                        <p class="price">LKR <span>359,000.00</span></p>
+                        <a href="booking.html" class="book-now">
+                            BOOK NOW
+                            <img src="Images/calendar-date.png" alt="bookings">
+                        </a>
+                        <div class="deposit">
+                            <p>LKR 350,000.00</p>
+                            <p>Refundable Deposit</p>
+                        </div>
+                        <ul class="car-info">
+                            <li>4 Passengers</li>
+                            <li>2 Bags</li>
+                            <li>5 Doors</li>
+                            <li>Auto</li>
+                            <li>Air conditioning</li>
+                            <li>295.00 LKR Per Extra Km</li>
+                        </ul>
+                        <ul class="additional-info">
+                            <li>Free mileage: 300 KM</li>
+                            <li>24/7 Road Side Assistance</li>
+                            <li>No Hidden Charges</li>
+                            <li>Tax excluded Rates</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="box-container-4wd" class="box-container 4wd-and-suv">
+            <h2 class="box-heading">4WD and SUV Cars</h2>
+            <div class="car-container">
+                <!-- Car Card 1 -->
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="Images/Land-Rover-Defender.png" alt="Defender">
+                    </div>
+                    <div class="car-details">
+                        <h3>Land Rover Defender</h3>
+                        <p class="self-driven">SELF DRIVEN / WITH DRIVER</p>
+                        <p class="price">LKR <span>398,000.00</span></p>
+                        <a href="booking.html" class="book-now">
+                            BOOK NOW
+                            <img src="Images/calendar-date.png" alt="bookings">
+                        </a>
+                        <div class="deposit">
+                            <p>LKR 400,000.00</p>
+                            <p>Refundable Deposit</p>
+                        </div>
+                        <ul class="car-info">
+                            <li>4 Passengers</li>
+                            <li>2 Bags</li>
+                            <li>5 Doors</li>
+                            <li>Auto</li>
+                            <li>Air conditioning</li>
+                            <li>400.00 LKR Per Extra Km</li>
+                        </ul>
+                        <ul class="additional-info">
+                            <li>Free mileage: 300 KM</li>
+                            <li>24/7 Road Side Assistance</li>
+                            <li>No Hidden Charges</li>
+                            <li>Tax excluded Rates</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="Images/Mitsubishi-Monteropreview.png" alt="Montero">
+                    </div>
+                    <div class="car-details">
+                        <h3>Mitsubishi Montero</h3>
+                        <p class="self-driven">SELF DRIVEN / WITH DRIVER</p>
+                        <p class="price">LKR <span>425,000.00</span></p>
+                        <a href="booking.html" class="book-now">
+                            BOOK NOW
+                            <img src="Images/calendar-date.png" alt="bookings">
+                        </a>
+                        <div class="deposit">
+                            <p>LKR 450,000.00</p>
+                            <p>Refundable Deposit</p>
+                        </div>
+                        <ul class="car-info">
+                            <li>4 Passengers</li>
+                            <li>2 Bags</li>
+                            <li>5 Doors</li>
+                            <li>Auto</li>
+                            <li>Air conditioning</li>
+                            <li>500.00 LKR Per Extra Km</li>
+                        </ul>
+                        <ul class="additional-info">
+                            <li>Free mileage: 300 KM</li>
+                            <li>24/7 Road Side Assistance</li>
+                            <li>No Hidden Charges</li>
+                            <li>Tax excluded Rates</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="Images/Toyota-Prado.png" alt="Prado">
+                    </div>
+                    <div class="car-details">
+                        <h3>Toyota Prado</h3>
+                        <p class="self-driven">SELF DRIVEN / WITH DRIVER</p>
+                        <p class="price">LKR <span>465,000.00</span></p>
+                        <a href="booking.html" class="book-now">
+                            BOOK NOW
+                            <img src="Images/calendar-date.png" alt="bookings">
+                        </a>
+                        <div class="deposit">
+                            <p>LKR 475,000.00</p>
+                            <p>Refundable Deposit</p>
+                        </div>
+                        <ul class="car-info">
+                            <li>4 Passengers</li>
+                            <li>2 Bags</li>
+                            <li>5 Doors</li>
+                            <li>Auto</li>
+                            <li>Air conditioning</li>
+                            <li>520.00 LKR Per Extra Km</li>
+                        </ul>
+                        <ul class="additional-info">
+                            <li>Free mileage: 300 KM</li>
+                            <li>24/7 Road Side Assistance</li>
+                            <li>No Hidden Charges</li>
+                            <li>Tax excluded Rates</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="car-card">
+                    <div class="car-image">
+                    <img src="Images/Mitsubishi-Outlander.png" alt="Outlander">
+                    </div>
+                    <div class="car-details">
+                        <h3>Mitsubishi Outlander</h3>
+                        <p class="self-driven">SELF DRIVEN / WITH DRIVER</p>
+                        <p class="price">LKR <span>485,000.00</span></p>
+                        <a href="booking.html" class="book-now">
+                            BOOK NOW
+                            <img src="Images/calendar-date.png" alt="bookings">
+                        </a>
+                        <div class="deposit">
+                            <p>LKR 495,000.00</p>
+                            <p>Refundable Deposit</p>
+                        </div>
+                        <ul class="car-info">
+                            <li>4 Passengers</li>
+                            <li>2 Bags</li>
+                            <li>5 Doors</li>
+                            <li>Auto</li>
+                            <li>Air conditioning</li>
+                            <li>540.00 LKR Per Extra Km</li>
+                        </ul>
+                        <ul class="additional-info">
+                            <li>Free mileage: 300 KM</li>
+                            <li>24/7 Road Side Assistance</li>
+                            <li>No Hidden Charges</li>
+                            <li>Tax excluded Rates</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="bottom-section">
+                <p>You have any questions or need additional information? <a href="contact us.html">Contact Us</a></p>
+                <div class="icon-container">
+                    <p>Follow us on</p>
+                    <i class="fa-brands fa-square-facebook"></i>
+                    <i class="fa-brands fa-square-instagram"></i>
+                    <i class="fa-brands fa-square-x-twitter"></i>
+                </div>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="#">Terms and Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </nav>
+
+            <div class="contact">
+                <img src="Images/Capture.png" alt="membership">
+                <p>Call Us: +94 77 586 2434</p>
+                <p>Email: support@automart.lk</p>
+            </div>
+            <p class="copyright">&copy; 2024 AutoMart</p>
+    </footer>
+
+
+    </body>
+</html>
+
+		

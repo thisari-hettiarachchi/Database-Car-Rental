@@ -1,0 +1,359 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.topnav {
+    position: absolute; 
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    background:transparent;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    justify-content: space-between;
+    z-index: 1; 
+}
+
+.topnav .navbar-brand {
+    margin-right: auto;
+    width: 50px;
+    height: auto;
+}
+
+.topnav a {
+    color: black;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.topnav a:hover {
+    color: blue;
+}
+
+.topnav a.active {
+    padding: 2px;
+    text-decoration: none; 
+    border-bottom:  solid blue; 
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-form input[type="text"] {
+    padding: 6px;
+    margin: 8px 0;
+    font-size: 17px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+}
+
+.search-form button {
+    padding: 6px 10px;
+    background: #ddd;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.search-form button img {
+    width: 16px;
+    height: 16px;
+}
+
+.hero {
+    background-size: cover;
+    height: 109vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("Images/new\ girl.jpg") no-repeat center center/cover;
+    filter: blur(8px); 
+    z-index: -1; 
+}
+
+@media (max-width: 768px) {
+    .hero::before {
+        background-size: contain;
+    }
+}
+
+
+.search-container {
+    text-align: center;
+    color: #fff;
+}
+
+.search-container h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.search-container p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.hero-container {
+background-color: rgba(0,0,0, 0.4); 
+color: white;
+font-weight: bold;
+border: 3px solid #f1f1f1;
+position: absolute; 
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+z-index: 2; 
+width: 85%;
+padding: 30px;
+text-align: center;
+}
+
+.contact1{
+    display:flex;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    margin-bottom: 0px;
+    background-image: url("/home/clipart1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.box1{
+    width: 80%;
+    padding-bottom: 0px;
+    margin-right: 50%;
+}
+
+.title{
+    text-align: center;
+    padding-left: 450px;
+}
+
+.title_box{
+    display: flex;
+    padding-bottom: 10px;
+    font-family: Arial;
+    font-size: 25px;
+    text-decoration: underline;  
+}
+
+
+.form1, .map, #map{
+    margin-left: 20px;
+    margin-right:40px;
+
+}
+
+.sub_box1{
+    display: inline-flex;
+    width: 100%;
+    
+}
+
+.map{
+    width: 100%;
+    padding-left: 50px;
+}
+
+#map{
+    height: 90%;
+    border-style: solid;
+    border-color: rgb(231, 115, 222);
+    border-width: 20px;
+    border-radius: 10px;
+}
+
+.form1{
+width: 90%;
+font-family: sans-serif;
+}
+
+h3{
+    text-align: center;
+}
+
+.form{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 5px;
+    border-color: rgb(231, 115, 222);
+    margin-right: 250px;
+}
+
+input[type=text],input[type=email],input[type=tel], [type=Yourmessage] select {
+    width: 90%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+
+.address{
+    display:flex;
+    height: 200px;
+    padding-top: 0px;
+    padding-bottom: 50px;
+    margin-top: 50 px;
+    background-color: bisque;
+    font-family: arial;
+}
+
+.box2{
+    transform: translateX(-100px);
+}
+
+.box4{
+    font-weight: bold;
+}
+
+.box3{
+    font-family: sans-serif;
+    font-style: bold;
+    margin-top: 0px;
+    margin-left: 100px;
+    transform: translateX(-140px);
+}
+
+.box5{
+    font-family: sans-serif;
+    font-style: bold;
+    margin-top: 0px;
+    margin-left: 100px;
+    transform: translateX(240px);
+}
+
+.box2, .box3, .box4{
+    width: 250px;
+    height: 150px;
+    font-family: arial;
+    margin-top: 80px;
+    padding-left: 10px;
+    padding-top: 10px;
+    
+}
+
+p1{
+    font-weight: bold;
+}
+
+p2{
+    font-weight: bold;
+}
+
+h1{
+    border-bottom-style: groove;
+    border-color: black;
+}
+
+
+footer {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 20px;
+    text-align: center;
+}
+
+.top-section {
+    background-color: #ffffff;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.bottom-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bottom-section p {
+    margin: 0;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.icon-container p {
+    margin: 0;
+    margin-right: 10px;
+}
+
+.fa-square-facebook {
+    font-size: 40px;
+    color: blue;
+}
+
+.fa-square-instagram {
+    font-size: 40px;
+    color: #ee2a7b;
+}
+
+.fa-square-x-twitter {
+    font-size: 40px;
+    color: black;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.contact img {
+    max-width: 200px;
+    height: auto;
+}
+
+.contact p {
+    margin: 0;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #666;
+}
