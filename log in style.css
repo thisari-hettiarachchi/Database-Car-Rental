@@ -6,22 +6,20 @@ body {
 }
 
 .topnav {
-    position: absolute; 
+    position: absolute;
     top: 0;
     width: 100%;
     overflow: hidden;
-    background:transparent;
+    background: transparent;
     display: flex;
     align-items: center;
     padding: 10px 0;
     justify-content: space-between;
-    z-index: 1; 
+    z-index: 1;
 }
 
 .topnav .navbar-brand {
     margin-right: auto;
-    width: 50px;
-    height: auto;
 }
 
 .topnav a {
@@ -37,9 +35,9 @@ body {
 }
 
 .topnav a.active {
-    padding: 2px;
-    text-decoration: none; 
-    border-bottom:  solid blue; 
+    padding: 2px 12px;
+    text-decoration: none;
+    border-bottom: solid blue;
 }
 
 .search-form {
@@ -144,7 +142,6 @@ body {
     opacity: 0.8;
 }
 
-
 .forgot-password {
     display: block;
     text-align: right;
@@ -174,16 +171,9 @@ body {
 
 
 footer {
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #12223c;
+    color: #ffffff;
     padding: 20px;
-    text-align: center;
-}
-
-.top-section {
-    background-color: #ffffff;
-    border-bottom: 1px solid #eee;
-    padding: 10px 0;
     text-align: center;
 }
 
@@ -195,6 +185,12 @@ footer {
 
 .bottom-section p {
     margin: 0;
+}
+
+.bottom-section a {
+    margin: 0;
+    text-decoration: none;
+    color: grey;
 }
 
 .icon-container {
@@ -235,7 +231,11 @@ nav li {
 
 nav a {
     text-decoration: none;
-    color: #333;
+    color: grey;
+}
+
+nav a:hover {
+    color: #2514b9;
 }
 
 .contact {
@@ -260,5 +260,3 @@ nav a {
     font-size: 12px;
     color: #666;
 }
-
-

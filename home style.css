@@ -148,7 +148,7 @@ body {
 
 .about-container img:hover {
     transform: scale(1.1);
-    box-shadow: 0 8px 16px rgba(153, 155, 233, 0.3);
+    box-shadow: 0 8px 16px rgba(24, 27, 177, 0.3);
 }
 
 * {
@@ -193,7 +193,7 @@ body {
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
 }
 
 .model-image:hover {
@@ -205,7 +205,8 @@ body {
     margin-top: 10px;
     font-size: 16px;
     font-weight: bold;
-    color: #333;
+    background-color: #333;
+    color: var(--bg-color);
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -383,18 +384,12 @@ body {
 }
 
 .values {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.values p {
-    font-size: 19px;
-    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /* Adjust the gap between items as needed */
 }
 
 .value {
-    width: 25%;
     padding: 20px;
     text-align: center;
 }
@@ -416,17 +411,11 @@ body {
     color: #666;
 }
 
-footer {
-    background-color: #ffffff;
-    color: #000000;
-    padding: 20px;
-    text-align: center;
-}
 
-.top-section {
-    background-color: #ffffff;
-    border-bottom: 1px solid #eee;
-    padding: 10px 0;
+footer {
+    background-color: #12223c;
+    color: #ffffff;
+    padding: 20px;
     text-align: center;
 }
 
@@ -438,6 +427,12 @@ footer {
 
 .bottom-section p {
     margin: 0;
+}
+
+.bottom-section a {
+    margin: 0;
+    text-decoration: none;
+    color: grey;
 }
 
 .icon-container {
@@ -478,7 +473,11 @@ nav li {
 
 nav a {
     text-decoration: none;
-    color: #333;
+    color: grey;
+}
+
+nav a:hover {
+    color: #2514b9;
 }
 
 .contact {
