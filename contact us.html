@@ -1,5 +1,7 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -7,10 +9,6 @@
         <!--CSS Style-->
         <link rel="stylesheet" href="contact style.css">
      
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-        <link rel="stylesheet" href="/style/style.css"/>
-
         <!--Icon link-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         
@@ -18,8 +16,12 @@
 
         <!--Favicon-->
         <link rel="shortcut icon" href="Images/Favicon.png" type="image/svg+xml">
+
     </head>
+
     <body>
+        
+       
         <!-- Navigation bar and background image -->
         <div class="bg-img">
             <div class="topnav">
@@ -39,105 +41,90 @@
             </div>
         </div>
 
-    
-        <section1 class="contact1">
-    
-            <div class="box1">
-                <div class="title_box">
-                    <div class="title">
-                        <h1>Contact Us</h1>
-                    </div>
+        <section class="contact-container">
+            <div class="map-container">
+                <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.8217956261387!2d79.84873377417217!3d6.911899593087591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25942865f1bfb%3A0x141db277b60011d8!2sLiberty%20Plaza!5e0!3m2!1sen!2slk!4v1723101241191!5m2!1sen!2slk" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <form id="myForm" action="submit_handler.php" method="post">
+                    <a href="contact form.html" class="contact" type="submit" id="openModal">Contact Via Email</a>
+                </form>
+            </div>
+        
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <iframe src="contact form.html" width="100%" height="450px" style="border: none;"></iframe>
                 </div>
-                <div class="sub_box1">
-                    <div class="map">
-    
-                        <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.8889253859966!2d79.95253347418898!3d6.903884393095432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2572db04b0c9f%3A0xd609386dfe4a5d1!2sMalabe%20Junction%20Clock%20Tower%2C%20B263%2C%20Malabe!5e0!3m2!1sen!2slk!4v1722444678082!5m2!1sen!2slk" allowfullscreen="" loading="lazy"></iframe>
-    
+            </div>
+
+                <script>
+                    var modal = document.getElementById("myModal");
+                    var link = document.getElementById("openModal");
+                    var span = document.getElementsByClassName("close")[0];
+
+                    link.onclick = function(event) {
+                        event.preventDefault(); 
+                        modal.style.display = "block";
+                    }
+
+                    span.onclick = function() {
+                        modal.style.display = "none";
+                    }
+
+                    window.onclick = function(event) {
+                        if (event.target == modal) {
+                            modal.style.display = "none";
+                        }
+                    }
+                </script> 
+        
+            <section class="branch-container">
+                <div class="branch-content">
+                    <h1 style="font-size: 22px;">Our Branches</h1>
+                    <div class="content">
+                        <h1>Head Office</h1>
+                        <p>No. 32/A, <br> Second floor <br> Liberty Plaze,<br>Colombo 03.<br>Tel : 011 2475 632<br></p>
                     </div>
-                    <div class="form">
-                        <form1 action="">
-    
-                            <h3> Get In Touch</h3> 
-                            <input type="text" placeholder="Name" class="form_field">
-                            <input type="email" placeholder="E-mail" class="form_field">
-                            <input type="tel" placeholder="Contact Number" class="form_field"> 
-                            <textarea placeholder="Your message" class="form_field" cols="58" rows="10"></textarea>
-                            
-                            <br/> </br>
-                            <input type="submit" value="Send Message" class="btn">
                     
-            
-                        </form1>
+                    <div class="content">
+                        <h1>Other Branches</h1>
+                        <p>Kandy<br> Tel: 011 2956 881</p>
+                        <p>Galle<br> Tel: 011 2956 882</p>
+                        <p>Kurunegala<br> Tel: 011 2956 883</p>
+                        <p>Anuradhapura<br> Tel: 011 2956 884</p>
+                        <p>Trincomalee<br> Tel: 011 2956 885</p>
+                        <p>Jaffna<br> Tel: 011 2956 886</p>
                     </div>
                 </div>
-            </div>
-        </section1>
-    
-        <section2 class="address">
-                <div class="box5">
-                <h1> Our Branches</h1>
-                </div>
-    
-                <div class="box2">
-                <p1>Liberty Plaza<br></p1>
-                 <p>No. 32/A,<br>
-                 Main Road,<br>
-                 Negambo.<br>
-                 Tel: 011 2475 632<br>
-                 </p>
-                 </div>
-    
-                 <div class="box3">
-    
-                 <p2>Negambo Mall<br></p2>
-                 <p>No. 12/1/2,<br>
-                 Second floor,<br>
-                 Liberty Plaza,<br>
-                 Colombo 03.<br>
-                 Tel: 011 2956 881<br>
-                </p>
-                </div>
-                <br/>
-                <br/>
-                
-    
-                <div class="box4">
-                <h8>GOT ANY QUERIES? CALL US!</h8>
-                <br/>
-                <br/>
-                <h9>+94 112 406 558</h9>
-                <br/>
-                <h10>+94 756 203 621</h10>
-    
-                </div>
-    
-        </section2>
+            </section>
+        </section>
+        
 
-        <!-- Footer -->
-       <footer>
-            <div class="bottom-section">
-                <p>You have any questions or need additional information? <a href="contact us.html">Contact Us</a></p>
-                <div class="icon-container">
-                    <p>Follow us on</p>
-                    <i class="fa-brands fa-square-facebook"></i>
-                    <i class="fa-brands fa-square-instagram"></i>
-                    <i class="fa-brands fa-square-x-twitter"></i>
-                </div>
+        
+      <!-- Footer -->
+      <footer>
+        <div class="bottom-section">
+            <p>You have any questions or need additional information? <a href="contact us.html">Contact Us</a></p>
+            <div class="icon-container">
+                <p>Follow us on</p>
+                <i class="fa-brands fa-square-facebook"></i>
+                <i class="fa-brands fa-square-instagram"></i>
+                <i class="fa-brands fa-square-x-twitter"></i>
             </div>
+        </div>
 
-            <nav>
-                <ul>
-                    <li><a href="#">Terms and Conditions</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Refund Policy</a></li>
-                </ul>
-            </nav>
+        <nav>
+            <ul>
+                <li><a href="#">Terms and Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Refund Policy</a></li>
+            </ul>
+        </nav>
 
-            <div class="contact">
-                <p>Call Us: +94 77 586 2434</p>
-                <p>Email: support@automart.lk</p>
-            </div>
-            <p class="copyright">&copy; 2024 AutoMart</p>
-        </footer>
-    </body>
+        <div class="footer-contact">
+            <p>Call Us: +94 77 586 2434</p>
+            <p>Email: support@automart.lk</p>
+        </div>
+        <p class="copyright">&copy; 2024 AutoMart</p>
+    </footer>
+</body>
 </html>

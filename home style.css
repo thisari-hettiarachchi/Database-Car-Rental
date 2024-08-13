@@ -253,15 +253,6 @@ body {
     margin-bottom: 20px;
 }
 
-.details-button {
-    padding: 10px 20px;
-    background-color: white;
-    color: #12223c;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-}
-
 .services-images {
     display: flex;
     flex: 2;

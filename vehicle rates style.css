@@ -311,9 +311,9 @@ input[type="date"]{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: calc(100% - 20px); /* Full width minus padding for gaps */
+    width: calc(100% - 20px); 
     padding: 10px;
-    margin: 10px auto; /* Center horizontally with margin auto */
+    margin: 10px auto; 
     color: white;
     cursor: pointer;
     background-color: green;

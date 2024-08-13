@@ -68,33 +68,6 @@ body {
     height: 16px;
 }
 
-.hero {
-    background-size: cover;
-    height: 109vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url("Images/new\ girl.jpg") no-repeat center center/cover;
-    filter: blur(8px); 
-    z-index: -1; 
-}
-
-@media (max-width: 768px) {
-    .hero::before {
-        background-size: contain;
-    }
-}
-
 
 .search-container {
     text-align: center;
@@ -111,164 +84,128 @@ body {
     margin-bottom: 20px;
 }
 
-.hero-container {
-background-color: rgba(0,0,0, 0.4); 
-color: white;
-font-weight: bold;
-border: 3px solid #f1f1f1;
-position: absolute; 
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-z-index: 2; 
-width: 85%;
-padding: 30px;
-text-align: center;
+.map-container {
+    flex: 1; 
+    margin-right: 1rem; 
+    justify-content: space-between;
+    gap: 20px;
 }
 
-.contact1{
-    display:flex;
-    padding-top: 20px;
-    padding-bottom: 50px;
-    margin-bottom: 0px;
-    background-image: url("/home/clipart1.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.box1{
-    width: 80%;
-    padding-bottom: 0px;
-    margin-right: 50%;
-}
-
-.title{
-    text-align: center;
-    padding-left: 450px;
-}
-
-.title_box{
-    display: flex;
-    padding-bottom: 10px;
-    font-family: Arial;
-    font-size: 25px;
-    text-decoration: underline;  
-}
-
-
-.form1, .map, #map{
-    margin-left: 20px;
-    margin-right:40px;
-
-}
-
-.sub_box1{
-    display: inline-flex;
-    width: 100%;
-    
-}
-
-.map{
-    width: 100%;
+#map {
+    width: 55%;
+    height: 600px; 
+    border: 0;
+    padding-top: 100px;
     padding-left: 50px;
 }
 
-#map{
-    height: 90%;
-    border-style: solid;
-    border-color: rgb(231, 115, 222);
-    border-width: 20px;
-    border-radius: 10px;
-}
-
-.form1{
-width: 90%;
-font-family: sans-serif;
-}
-
-h3{
+#myForm {
+    box-sizing: border-box; 
     text-align: center;
 }
 
-.form{
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 10px;
-    border-style: solid;
-    border-radius: 10px;
-    border-width: 5px;
-    border-color: rgb(231, 115, 222);
-    margin-right: 250px;
-}
-
-input[type=text],input[type=email],input[type=tel], [type=Yourmessage] select {
-    width: 90%;
-    padding: 12px 20px;
-    margin: 8px 0;
+#myForm [type="submit"] {
+    padding: 14px 20px;
+    text-align: center;
+    text-decoration: none;
     display: inline-block;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-
-
-.address{
-    display:flex;
-    height: 200px;
-    padding-top: 0px;
-    padding-bottom: 50px;
-    margin-top: 50 px;
-    background-color: bisque;
-    font-family: arial;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin: 8px 0;
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    width: 50%;
 }
 
-.box2{
-    transform: translateX(-100px);
+.contact {
+    text-decoration: none; 
+    color: white; 
+    display: inline-block; 
+    padding: 10px; 
+    background-color: #007bff; 
+    border-radius: 5px; 
 }
 
-.box4{
+.contact:hover {
+    background-color: #0056b3;
+}
+
+.contact-container {
+    margin-bottom: 90px;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: hidden; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* Adjust the top margin as needed */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%; /* Set the width of the modal */
+    max-width: 800px; /* Maximum width for larger screens */
+    border-radius: 10px; /* Optional: rounded corners */
+    position: relative; /* For positioning the close button */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Optional: shadow effect */
+}
+
+/* Close button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
     font-weight: bold;
 }
 
-.box3{
-    font-family: sans-serif;
-    font-style: bold;
-    margin-top: 0px;
-    margin-left: 100px;
-    transform: translateX(-140px);
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
 
-.box5{
-    font-family: sans-serif;
-    font-style: bold;
-    margin-top: 0px;
-    margin-left: 100px;
-    transform: translateX(240px);
+/* Optional: Style for the contact link */
+.openModel{
+    text-decoration: none; /* Remove underline */
+    color: white; /* Text color */
+    padding: 10px;
+    border-radius: 5px; /* Rounded corners */
 }
 
-.box2, .box3, .box4{
-    width: 250px;
-    height: 150px;
-    font-family: arial;
-    margin-top: 80px;
-    padding-left: 10px;
-    padding-top: 10px;
+.contact:hover {
+    background-color: #0056b3; /* Darker background on hover */
+}
+
+.branch-container {
+    text-align:center;
+    background-color:#12223c; 
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 1;
+    margin-right: 50px;
+    padding: 20px;
+    width: 350px; 
+    margin-left: 900px;
+    margin-top: -670px;
     
 }
 
-p1{
-    font-weight: bold;
+.content h1 {
+    text-decoration: underline;
 }
-
-p2{
-    font-weight: bold;
-}
-
-h1{
-    border-bottom-style: groove;
-    border-color: black;
-}
-
 
 footer {
     background-color: #12223c;
@@ -338,7 +275,7 @@ nav a:hover {
     color: #2514b9;
 }
 
-.contact {
+.footer-contact {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -346,12 +283,7 @@ nav a:hover {
     margin-top: 10px;
 }
 
-.contact img {
-    max-width: 200px;
-    height: auto;
-}
-
-.contact p {
+.footer-contact p {
     margin: 0;
 }
 
