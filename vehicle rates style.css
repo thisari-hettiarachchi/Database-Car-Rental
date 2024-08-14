@@ -435,6 +435,10 @@ footer {
     color: grey;
 }
 
+.bottom-section a:hover {
+    color: #2514b9;
+}
+
 .icon-container {
     display: flex;
     justify-content: flex-start;

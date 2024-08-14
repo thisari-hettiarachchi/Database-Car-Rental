@@ -162,6 +162,7 @@ body {
 
 .signup-text a {
     color: blue;
+    text-decoration: none;
 }
 
 .signup-text a:hover {
@@ -191,6 +192,11 @@ footer {
     text-decoration: none;
     color: grey;
 }
+
+.bottom-section a:hover {
+    color: #2514b9;
+}
+
 
 .icon-container {
     display: flex;
