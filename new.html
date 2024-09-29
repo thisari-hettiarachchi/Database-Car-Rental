@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental Admin Dashboard</title>
+    <link rel="stylesheet" href="new.css">
+    <script defer src="new.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2>Admin Panel</h2>
+        </div>
+        <ul>
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#cars">Manage Cars</a></li>
+            <li><a href="#users">Manage Users</a></li>
+            <li><a href="#rentals">Rentals</a></li>
+            <li><a href="#logout">Logout</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <h1>Welcome to the Car Rental Dashboard</h1>
+        </header>
+
+        <section id="dashboard">
+            <h2>Dashboard Overview</h2>
+            <div class="dashboard-stats">
+                <div class="card">
+                    <h3>Total Cars</h3>
+                    <p id="totalCars">50</p>
+                </div>
+                <div class="card">
+                    <h3>Total Users</h3>
+                    <p id="totalUsers">120</p>
+                </div>
+                <div class="card">
+                    <h3>Total Rentals</h3>
+                    <p id="totalRentals">75</p>
+                </div>
+                <div class="card">
+                    <h3>Available Cars</h3>
+                    <p id="availableCars">10</p>
+                </div>
+            </div>
+        </section>
+
+        
+		<form action="new.php" method="post" id="admin-dashboard">
+            <section id="cars">
+                <h2>Manage Cars</h2>
+                <button id="addCarBtn">Add New Car</button>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Vehicle Id</th>
+                            <th>Car Model</th>
+                            <th>Rental Price</th>
+                            <th>vehicle Category</th>
+                            <th>Passengers</th>
+                            <th>Transmission Type</th>
+                            <th>Air Conditioning</th>
+                            <th>Extra km Rate</th>
+                            <th>Free Mileage km</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Car rows will be dynamically added here -->
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="users">
+                <h2>Manage Users</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>User ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- User rows will be dynamically added here -->
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="rentals">
+                <h2>Manage Rentals</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Booking ID</th>
+                            <th>Title</th>
+                            <th>Full Name</th>
+                            <th>Address</th>
+                            <th>Mobile No</th>
+                            <th>Email</th>
+                            <th>NIC No</th>
+                            <th>License No</th>
+                            <th>License Expiry</th>
+                            <th>Vehicle Type</th>
+                            <th>Vehicle Name</th>
+                            <th>Pick Up Location</th>
+                            <th>Drop Off Location</th>
+                            <th>Billing Address</th>
+                            <th>Billing Address Optional</th>
+                            <th>Card Type</th>
+                            <th>Card Number</th>
+                            <th>Card Expiry</th>
+                            <th>Card CVN</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Rental rows will be dynamically added here -->
+                    </tbody>
+                </table>
+            </section>
+        </form>
+
+    </div>
+</body>
+</html>
